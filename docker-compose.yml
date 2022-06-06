@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  mongo:
+    image: mongo:latest
+    environment:
+      - MONGODB_DATABASE='test'
+    ports:
+      - '27017:27017'
+  
+  postgres:
+    image: postgres:latest
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_PASSWORD: postgres
